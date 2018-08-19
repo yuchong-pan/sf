@@ -1209,11 +1209,11 @@ Fixpoint plus' (n : nat) (m : nat) : nat :=
     _does_ terminate on all inputs, but that Coq will reject because
     of this restriction. *)
 
-(**
+(*
 Fixpoint sum (cur : nat) (n : nat) : nat :=
-  match (beq_nat cur n) with
-  | true => n
-  | false => cur + (sum (cur + 1) n)
+  match (leb cur n) with
+  | true => cur + (sum (cur + 1) n)
+  | false => 0
   end.
 *)
 (** [] *)
