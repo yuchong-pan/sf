@@ -452,7 +452,7 @@ Proof.
 
         (S n') + m = m + (S n').
 
-      We have proved that for every natuarl number [n] and [m],
+      We have proved that for every natural number [n] and [m],
 
         S (n + m) = n + (S m).
 
@@ -464,7 +464,7 @@ Proof.
 
         S (n' + m) = S (m + n').
 
-      which is immediately from the induction hypothesis. Qed.
+      This is immediately from the induction hypothesis. Qed.
 *)
 (** [] *)
 
