@@ -743,10 +743,10 @@ Proof.
 
 (* The problem is that a binary number might contain an arbitrary number of
    leading zeros, and hence a binary representation of a natural number is
-   not unique. In other words, there might be an arbitrary number of applications
-   of the [Twice] constructor on [Zero] before other constructor applications,
-   whereas the result still represents zero. For instance, [Twice (Twice Zero)]
-   and [Zero] both represent the binrary number of zero. *)
+   not unique. In other words, the [Twice] constructor may be applied on `Zero`
+   multiple times before the first application of `TwicePlusOne`. For instance,
+   [TwicePlusOne (TwicePlusOne Zero)] and [TwicePlusOne (TwicePlusOne (Twice Zero))]
+   both represent the natural number 3. *)
 
 Fixpoint normalize (b : bin) : bin :=
   match b with
